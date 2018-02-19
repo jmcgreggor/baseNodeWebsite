@@ -1,0 +1,26 @@
+{
+  "name": "website-using-express",
+  "version": "0.1.0",
+  "description": "Base website based on Node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Server.js",
+    "dev": "nodemon Server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmcgreggor/baseNodeWebsite.git"
+  },
+  "author": "James McGreggor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmcgreggor/baseNodeWebsite/issues"
+  },
+  "homepage": "https://github.com/jmcgreggor/baseNodeWebsite#readme",
+  "dependencies": {
+    "express": "latest"
+  },
+  "devDependencies": {
+    "nodemon": "^1.15.0"
+  }
+}

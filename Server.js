@@ -25,6 +25,14 @@ router.get("/navbar.js",function(req,res){
   res.sendFile(path + "/scripts/navbar.js");
 });
 
+router.get("/styles.less",function(req,res){
+  res.sendFile(path + "/stylesheets/styles.less");
+});
+
+router.get("/styles.css",function(req,res){
+  res.sendFile(path + "/stylesheets/styles.css");
+});
+
 app.use("/",router);
 
 app.use("*",function(req,res){

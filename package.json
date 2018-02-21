@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/jmcgreggor/baseNodeWebsite#readme",
   "dependencies": {
-    "express": "latest"
+    "express": "latest",
+    "install": "^0.10.4",
+    "less": "^3.0.1"
   },
   "devDependencies": {
     "nodemon": "^1.15.0"

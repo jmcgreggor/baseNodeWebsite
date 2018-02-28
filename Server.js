@@ -25,16 +25,20 @@ router.get("/navbar.js",function(req,res){
   res.sendFile(path + "/scripts/navbar.js");
 });
 
+router.get("/footer.html",function(req,res){
+  res.sendFile(path + "/views/footer.html");
+});
+
+router.get("/footer.js",function(req,res){
+  res.sendFile(path + "/scripts/footer.js");
+});
+
 router.get("/less.js",function(req,res){
   res.sendFile(path + "/node_modules/less/dist/less.js");
 });
 
 router.get("/styles.less",function(req,res){
   res.sendFile(path + "/stylesheets/styles.less");
-});
-
-router.get("/styles.css",function(req,res){
-  res.sendFile(path + "/stylesheets/styles.css");
 });
 
 app.use("/",router);

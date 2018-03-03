@@ -30,7 +30,7 @@ header .intro-text .intro-main {
     font-size: 3em;
     font-weight: 700;
 
-    // TODO: center justification    
+    // TODO: center justification
 }
 
 header .intro-text .intro-sub {
@@ -132,6 +132,67 @@ hr .star-light {
 	line-height: 35px;
 
 	margin-left: 3px;
+}
+
+.c-section--bg-dark {
+    background: #202034 linear-gradient(to bottom,#282841,#202034 100%);
+    background-image: linear-gradient(rgb(40, 40, 65), rgb(32, 32, 52) 100%);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(32, 32, 52);
+    color: white;
+
+}
+
+.quote {
+  background: #41ade5;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.quote:before {
+  background: inherit;
+  top: 0;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(1.5deg);
+  transform-origin: 100%;
+  z-index: -1;
+}
+
+.quote:after {
+  background: inherit;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-1.5deg);
+  transform-origin: 100%;
+  z-index: -1;
+}
+
+.promo {
+  -webkit-clip-path: polygon(0 0, 1600px 0, 1600px 87%, 0 100%);
+  clip-path: polygon(0 0, 1600px 0, 1600px 87%, 0 100%);
+}
+
+.hero-image img {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
 }
 
 /* Media query for responsive footer */

@@ -41,6 +41,14 @@ router.get("/styles.less",function(req,res){
   res.sendFile(path + "/stylesheets/styles.less");
 });
 
+router.get("/styles-alt.less",function(req,res){
+  res.sendFile(path + "/stylesheets/styles-alt.less");
+});
+
+router.get("/header-main.jpg",function(req,res){
+  res.sendFile(path + "/images/header-main.jpg");
+});
+
 app.use("/",router);
 
 app.use("*",function(req,res){

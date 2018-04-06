@@ -1,26 +1,97 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Single page web app using Express</title>
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <title>Single page web app using Express</title>
+  <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script> -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet/less" type="text/css" href="styles.less">
+  <script src="less.js" type="text/javascript"></script>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
 </head>
-<div data-navbar="navbar-div">
-</div>
-<header >
-</header>
 <body>
-  <div>
-    <div class="jumbotron">
-      <p>
-       Put main information here.
-      </p>
-    </div>
+  <div data-navbar="navbar-div" class="content-navbar">
   </div>
-<div data-navbar="footer-div">
-</div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <div data-header="header-div" class="content-header">
+    <header id="page-top">
+    <!-- <img class="img-responsive" src="https://ununsplash.imgix.net/photo-1416339134316-0e91dc9ded92?q=75&fm=jpg&s=883a422e10fc4149893984019f63c818" alt=""> -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="intro-text">
+              <span class="intro-main">Intro goes here</span>
+                <hr class="star-light">
+                <p></p>
+                <p class="intro-sub">Tagline</p>
+                <p class="intro-sub">Additional info</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div data-content="content-div" class="content-main">
+      <section class="primary" id="main-topic">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12 text-center">
+                      <h2>MAIN TOPIC</h2>
+                      <p></p>
+                  </div>
+              </div>
+              <div class="img-row">
+                  <div class="col-sm-4">
+                      <img src="http://lorempixel.com/360/260/sports/">
+                  </div>
+                  <div class="col-sm-4">
+                      <img src="http://lorempixel.com/360/260/animals/">
+                  </div>
+                  <div class="col-sm-4">
+                      <img src="http://lorempixel.com/360/260/abstract/">
+                  </div>
+              </div>
+          </div>
+      </section>
+      <section class="img-parallax" id="secondary-topic">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12 text-center">
+                      <h2>SECONDARY TOPIC</h2>
+                      <p></p>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-lg-4 col-lg-offset-2">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  </div>
+                  <div class="col-lg-4">
+                      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <section class="regular" id="teritary-topic">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12 text-center">
+                      <h2>TERTIARY TOPIC</h2>
+                      <p></p>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-lg-8 col-lg-offset-2">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  </div>
+              </div>
+          </div>
+      </section>
+    </div>
+  <div data-footer="footer-div" class="content-footer">
+  </div>
 <script src="navbar.js"></script>
 <script src="footer.js"></script>
 </body>

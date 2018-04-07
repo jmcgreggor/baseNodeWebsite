@@ -9,6 +9,8 @@ router.use(function (req, res, next) {
   next();
 });
 
+/* HTML ROUTES */
+
 router.get("/",function(req,res){
   res.sendFile(path + "/views/index.html");
 });
@@ -21,16 +23,46 @@ router.get("/navbar.html",function(req,res){
   res.sendFile(path + "/views/navbar.html");
 });
 
-router.get("/navbar.js",function(req,res){
-  res.sendFile(path + "/scripts/navbar.js");
+router.get("/header-index.html",function(req,res){
+  res.sendFile(path + "/views/partials/header-index.html");
+});
+
+router.get("/header-about.html",function(req,res){
+  res.sendFile(path + "/views/partials/header-about.html");
+});
+
+router.get("/header-main.jpg",function(req,res){
+  res.sendFile(path + "/images/header-main.jpg");
+});
+
+router.get("/about-main.html",function(req,res){
+  res.sendFile(path + "/views/partials/about-main.html");
+});
+
+router.get("/index-main.html",function(req,res){
+  res.sendFile(path + "/views/partials/index-main.html");
 });
 
 router.get("/footer.html",function(req,res){
   res.sendFile(path + "/views/footer.html");
 });
 
-router.get("/footer.js",function(req,res){
-  res.sendFile(path + "/scripts/footer.js");
+/* JS ROUTES */
+
+router.get("/navbar.js",function(req,res){
+  res.sendFile(path + "/scripts/navbar.js");
+});
+
+router.get("/body-header.js",function(req,res){
+  res.sendFile(path + "/scripts/body-header.js");
+});
+
+router.get("/body-main.js",function(req,res){
+  res.sendFile(path + "/scripts/body-main.js");
+});
+
+router.get("/body-footer.js",function(req,res){
+  res.sendFile(path + "/scripts/body-footer.js");
 });
 
 router.get("/less.js",function(req,res){
@@ -39,14 +71,6 @@ router.get("/less.js",function(req,res){
 
 router.get("/styles.less",function(req,res){
   res.sendFile(path + "/stylesheets/styles.less");
-});
-
-router.get("/styles-alt.less",function(req,res){
-  res.sendFile(path + "/stylesheets/styles-alt.less");
-});
-
-router.get("/header-main.jpg",function(req,res){
-  res.sendFile(path + "/images/header-main.jpg");
 });
 
 app.use("/",router);

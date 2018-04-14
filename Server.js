@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 var router = express.Router();
 var path = __dirname;
-// var path = __dirname + '/views/';
+var viewsPath = __dirname + "/views/"
 
 router.use(function (req, res, next) {
   console.log("/" + req.method);
@@ -10,43 +10,33 @@ router.use(function (req, res, next) {
 });
 
 router.get("/",function(req,res){
-  res.sendFile(path + "/views/index.html");
+  res.sendFile(viewsPath + "index.html");
 });
 
 router.get("/about",function(req,res){
-  res.sendFile(path + "/views/about.html");
-});
-
-router.get("/navbar.html",function(req,res){
-  res.sendFile(path + "/views/navbar.html");
-});
-
-router.get("/navbar.js",function(req,res){
-  res.sendFile(path + "/scripts/navbar.js");
-});
-
-router.get("/footer.html",function(req,res){
-  res.sendFile(path + "/views/footer.html");
-});
-
-router.get("/footer.js",function(req,res){
-  res.sendFile(path + "/scripts/footer.js");
+  res.sendFile(viewsPath + "about.html");
 });
 
 router.get("/less.js",function(req,res){
   res.sendFile(path + "/node_modules/less/dist/less.js");
 });
 
-router.get("/styles.less",function(req,res){
-  res.sendFile(path + "/stylesheets/styles.less");
-});
-
 app.use("/",router);
 
+app.use('/images', express.static(path + '/public/images'));
+
+app.use('/scripts', express.static(path + '/scripts'));
+
+app.use('/partials', express.static(path + '/views/partials'));
+
+app.use('/styles', express.static(path + '/public/stylesheets'));
+
 app.use("*",function(req,res){
-  res.sendFile(path + "/views/404.html");
+  res.sendFile(viewsPath + "404.html");
 });
+
 
 app.listen(3000,function(){
   console.log("Live at Port 3000");
+  console.log(__dirname);
 });

@@ -1,27 +1,28 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Single page web app using Express</title>
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-</head>
-<div data-navbar="navbar-div">
-</div>
-<header >
-</header>
-<body>
-  <div>
-    <div class="jumbotron">
-      <p>
-       Put main information here.
-      </p>
-    </div>
+  <head>
+    <meta charset="UTF-8">
+    <title>Single page web app using Express</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet/less" type="text/css" href="styles/styles.less">
+    <script src="less.js" type="text/javascript"></script>
+  </head>
+  <div data-navbar="navbar-div" class="content-navbar">
   </div>
-<div data-navbar="footer-div">
-</div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<script src="navbar.js"></script>
-<script src="footer.js"></script>
-</body>
+  <body>
+    <header data-header-index="header-index" id="header-index">
+    </header>
+    <div class="content-wrapper">
+      <main data-main-index="main-index">
+      </main>
+      <footer data-footer="footer-div" class="content-footer">
+      </footer>
+    </div>
+    <script src="scripts/navbar.js"></script>
+    <script src="scripts/body-footer.js"></script>
+    <script src="scripts/body-header.js"></script>
+    <script src="scripts/body-main.js"></script>
+  </body>
 </html>

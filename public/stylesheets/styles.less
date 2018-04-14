@@ -1,0 +1,218 @@
+@import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
+@sec-color-1: #FFF;
+@sec-color-2: #75A4B2;
+@sec-color-3: #F4B743;
+@sec-color-4: #D4533F;
+@sec-color-5: #D54A49;
+@bk-img1: "https://picsum.photos/g/3200/1240?blur";
+@bk-img2: "https://picsum.photos/g/2800/1260?blur";
+
+html, body {
+  height: 100%;
+  background: #202034;
+}
+
+header {
+    text-align: center;
+    color: #fff;
+    background: #18bc9c;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    position: fixed;
+    width:100%;
+    z-index: 1;
+    height: 90%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+header .container {
+    padding-top: 350px;
+    padding-bottom: 50px;
+}
+
+header .hero-text .name {
+    display: block;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+header .hero-text .skills {
+    font-size: 1.25em;
+    font-weight: 300;
+}
+
+hr.star-light {
+    border-color: #fff;
+}
+
+section {
+    padding: 300px 0;
+    width: 100%;
+}
+
+section h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+section.bg-primary {
+    color: #fff;
+    background-color: #428bca;
+}
+
+//TODO: Reduce paralax code duplication
+
+section.bg-parallax1 {
+    background-image: url("@{bk-img1}");
+    height: 500px;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: #fff;
+}
+
+section.bg-parallax2 {
+    background-image: url("@{bk-img2}");
+    height: 500px;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: #fff;
+}
+
+//TODO: Reduce background code duplication
+
+section.bg-dark {
+    background: #202034 linear-gradient(to bottom,#282841,#202031 100%);
+    background-image: linear-gradient(rgb(40, 40, 65), rgb(32, 32, 52) 100%);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(32, 32, 52);
+    color: white;
+}
+
+section.bg-light {
+    background: #202034 linear-gradient(to bottom,#282841,#202031 100%);
+    background-image: linear-gradient(rgb(40, 40, 65), rgb(32, 32, 52) 100%);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(32, 32, 52);
+    color: white;
+}
+
+footer {
+  color: white;
+}
+
+.content-wrapper{
+    background-color: white;
+    top: 87%;
+    min-height: 12%;
+    position:absolute;
+    z-index: 2;
+    width: 100%;
+}
+
+.footer-distributed{
+      z-index: 1;
+	background-color: #202034;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: normal 16px sans-serif;
+
+	padding: 45px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left p{
+	color: white;
+	font-size: 14px;
+	margin: 0;
+}
+
+.footer-distributed p.footer-links{
+	font-size:18px;
+	font-weight: bold;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed p.footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-right{
+	float: right;
+	margin-top: 6px;
+	max-width: 180px;
+}
+
+.footer-distributed .footer-right a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-left: 3px;
+}
+
+#header-about {
+    background-image: url("/images/header-main.jpg");
+}
+
+#header-index {
+    background-image: url("/images/header-main.jpg");
+}
+
+
+@media (max-width: 600px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		text-align: center;
+	}
+
+	.footer-distributed .footer-right{
+		float: none;
+		margin: 0 auto 20px;
+	}
+
+	.footer-distributed .footer-left p.footer-links{
+		line-height: 1.8;
+	}
+}

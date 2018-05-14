@@ -13,4 +13,4 @@ run within a Dockerized container.
 ## Integrations
 
 1. Docker
-
+2. nginx

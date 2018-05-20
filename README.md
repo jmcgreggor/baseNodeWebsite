@@ -7,8 +7,9 @@ run within a Dockerized container.
 
 1. Express
 2. Bootstrap
-3. Nodemon (for dev only)
-4. Less (stylesheets)
+3. Node.js
+4. Nodemon (for dev only)
+5. Less (stylesheets)
 
 ## Integrations
 
